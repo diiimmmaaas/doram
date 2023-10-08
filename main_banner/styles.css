@@ -1,0 +1,172 @@
+@font-face {
+  font-family: Gothampro;
+  src: url(fonts/Gothampro_bold.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  background: #21202a;
+}
+
+.mainBannerContainer {
+  max-width: 1005px;
+}
+
+.mainBanner_for_big_screen {
+  font-family: Gothampro, sans-serif;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+
+.mainBanner_back img {
+  width: 100%;
+}
+
+.mainBanner_btnContainer {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mainBanner_btnContainer_small_screen {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mainBanner_button {
+  padding-top: 25px;
+  display: inline-block;
+}
+
+.mainBanner_button .mainBannerNormal-state,
+.mainBanner_button .mainBannerHover-state {
+  width: 451px;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mainBanner_button .mainBannerHover-state {
+  opacity: 0;
+}
+
+.mainBanner_button:hover .mainBannerNormal-state {
+  opacity: 0;
+}
+
+.mainBanner_button:hover .mainBannerHover-state {
+  opacity: 1;
+}
+
+.mainBanner_for_small_screen {
+ display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 401px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 351px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 311px;
+    top: 18px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 281px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 241px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 191px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .mainBanner_for_big_screen {
+    display: none;
+  }
+
+  .mainBanner_for_small_screen {
+    font-family: Gothampro, sans-serif;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mainBanner_button .mainBannerNormal-state,
+  .mainBanner_button .mainBannerHover-state {
+    width: 93%;
+    left: 17px;
+    top: auto;
+    bottom: 10px;
+  }
+
+  .mainBanner_back_small_screen {
+    width: 100%;
+  }
+
+  .mainBanner_back_image_small_screen {
+    width: 100%;
+  }
+  .mainBanner_btnContainer_small_screen {
+    width: 90%;
+  }
+  .mainBanner_button {
+    width: 100%;
+  }
+}

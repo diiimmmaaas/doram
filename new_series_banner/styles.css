@@ -1,0 +1,181 @@
+@font-face {
+  font-family: Gothampro;
+  src: url(fonts/Gothampro_bold.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  background: #21202a;
+}
+
+.newSeriesContainer {
+  max-width: 1005px;
+}
+
+.newSeriesBanner_for_big_screen {
+  font-family: Gothampro, sans-serif;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+
+.newSeriesBanner_back img {
+  width: 100%;
+}
+
+.newSeriesBanner_btnContainer {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.newSeriesBanner_btnContainer_small_screen {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.newSeriesBanner_button {
+  display: inline-block;
+}
+
+.newSeriesBanner_button .newSeriesBannerNormal-state,
+.newSeriesBanner_button .newSeriesBannerHover-state {
+  width: 372px;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-right: 63px;
+  margin-top: 3px;
+}
+
+.newSeriesBanner_button .newSeriesBannerHover-state {
+  opacity: 0;
+}
+
+.newSeriesBanner_button:hover .newSeriesBannerNormal-state {
+  opacity: 0;
+}
+
+.newSeriesBanner_button:hover .newSeriesBannerHover-state {
+  opacity: 1;
+}
+
+.newSeriesBanner_for_small_screen {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .newSeriesBanner_button .newSeriesBannerNormal-state,
+  .newSeriesBanner_button .newSeriesBannerHover-state {
+    width: 312px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .newSeriesBanner_button .newSeriesBannerNormal-state,
+  .newSeriesBanner_button .newSeriesBannerHover-state {
+    width: 281px;
+    margin-right: 43px;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    .newSeriesBanner_button .newSeriesBannerNormal-state,
+    .newSeriesBanner_button .newSeriesBannerHover-state {
+      width: 251px;
+      top: 24px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .newSeriesBanner_button .newSeriesBannerNormal-state,
+    .newSeriesBanner_button .newSeriesBannerHover-state {
+      width: 231px;
+      margin-right: 23px;
+      top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 565px) {
+    .newSeriesBanner_button .newSeriesBannerNormal-state,
+    .newSeriesBanner_button .newSeriesBannerHover-state {
+      width: 211px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .newSeriesBanner_button .newSeriesBannerNormal-state,
+    .newSeriesBanner_button .newSeriesBannerHover-state {
+      width: 191px;
+      top: 15px;
+      margin-right: 13px;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    .newSeriesBanner_for_big_screen {
+      display: none;
+    }
+
+    .newSeriesBanner_for_small_screen {
+      font-family: Gothampro, sans-serif;
+      width: 100%;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .newSeriesBanner_button .newSeriesBannerNormal-state,
+    .newSeriesBanner_button .newSeriesBannerHover-state {
+      width: 93%;
+      left: 17px;
+      top: auto;
+      bottom: 12px;
+    }
+
+    .newSeriesBanner_back_small_screen {
+      width: 100%;
+    }
+
+    .newSeriesBanner_back_image_small_screen {
+      width: 100%;
+    }
+
+    .newSeriesBanner_btnContainer_small_screen {
+      width: 90%;
+    }
+
+    .newSeriesBanner_button {
+      width: 100%;
+    }
+  }
+}
